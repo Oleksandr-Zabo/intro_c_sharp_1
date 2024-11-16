@@ -51,13 +51,13 @@ namespace Console_sharp_1
                 digit1 = (number / multiplier1) % 10;
                 digit2 = (number / multiplier2) % 10;
 
-                int leftPart1 = number / (multiplier1 * 10);
-                int rightPart1 = number % multiplier1;
-                number = leftPart1 * (multiplier1 * 10) + digit2 * multiplier1 + rightPart1;
+                int leftPart1 = number / (multiplier1 * 10);// 123456 / 1000 = 123
+                int rightPart1 = number % multiplier1;// 123456 % 100 = 56
+                number = leftPart1 * (multiplier1 * 10) + digit2 * multiplier1 + rightPart1;// 123456 = 123450 + 2*1000 + 56
 
-                int leftPart2 = number / (multiplier2 * 10);
-                int rightPart2 = number % multiplier2;
-                number = leftPart2 * (multiplier2 * 10) + digit1 * multiplier2 + rightPart2;
+                int leftPart2 = number / (multiplier2 * 10);// 123456 / 1000 = 123
+                int rightPart2 = number % multiplier2;// 123456 % 100 = 56
+                number = leftPart2 * (multiplier2 * 10) + digit1 * multiplier2 + rightPart2;// 123456 = 123450 + 1*1000 + 56
 
                 Console.WriteLine($"Результат: {number}");
             }
