@@ -11,33 +11,21 @@ namespace Console_sharp_1
 
             try
             {
-                Console.WriteLine("Введіть нижню межу діапазону:");
-                int lowerBound = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Введіть число:");
+                int number = Convert.ToInt32(Console.ReadLine());
+                Console.Write($"Твоє число: ");
 
-                Console.WriteLine("Введіть верхню межу діапазону:");
-                int upperBound = Convert.ToInt32(Console.ReadLine());
-
-                if (lowerBound > upperBound) {
-                    throw new Exception("Нижня межа діапазону не може бути більшою за верхню межу діапазону");
+                if (number < 0) {
+                    number *= -1;
+                    Console.Write("-");
                 }
 
-                int a = 0;
-                int b = 1;
-
-                Console.WriteLine($"Числа Фібоначчі в діапазоні від {lowerBound} до {upperBound}:");
-
-                while (a <= upperBound)
+                while(number > 0)
                 {
-                    if (a >= lowerBound)
-                    {
-                        Console.Write(a + " ");
-                    }
-
-                    int temp = a;
-                    a = b;
-                    b = temp + b;
+                    Console.Write(number % 10);
+                    number /= 10;
                 }
-
+                Console.WriteLine();
             }
             catch (Exception ex)
             {
