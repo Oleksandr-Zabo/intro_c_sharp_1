@@ -1,7 +1,7 @@
 ﻿using System.Text;
 namespace Console_sharp_1
 {
-    //lab-6
+    //lab-7
     public class Program
     {
         static void Main()
